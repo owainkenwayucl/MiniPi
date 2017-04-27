@@ -1,5 +1,4 @@
-# Pi-Sharp-Basic
-##The UCL-RITS Pi example written in S'-Basic for the Sharp PC-1251
+# BASIC
 
 In UCL RITS we have a repo of programs calculating Pi in a wide variety of different languages (https://github.com/UCL-RITS/pi_examples), mostly for fun.  While on holiday, I implemented the same algorithm in the cut down version of BASIC (called S'-BASIC) on my Sharp PC-1251 pocket computer.  
 
