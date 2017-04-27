@@ -1,6 +1,6 @@
 # Versions of the pi example for slightly less hospitable environments.
 
-## Overview
+## Overview:
 
 We maintain a repository of implementations of a particular method of 
 approximating Pi here: https://github.com/UCL-RITS/pi_examples
