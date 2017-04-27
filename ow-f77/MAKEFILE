@@ -1,0 +1,8 @@
+pi.exe: pi.f makefile
+	wfl386 pi.f
+
+pi16.exe: pi.f makefile
+	wfl /fe=pi16.exe pi.f
+
+clean:
+	del *.exe *.obj *.err
