@@ -1,0 +1,11 @@
+pi.exe: pi.obj ouchow.obj makefile
+	wfl386 ouchow.obj pi.obj 
+
+pi.obj: pi.f makefile
+	wfl386 -c pi.f
+
+ouchow.obj: ouchow.f makefile
+	wfl386 -c ouchow.f
+
+clean:
+	del *.exe *.obj *.err
