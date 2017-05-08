@@ -4,7 +4,7 @@
 
 Implementation in F77 intended to compile with a variety of compilers (OpenWatcom on FreeDOS, Gfortran on Linux etc.  This is achieved by using shim libraries.
 
-## Build (OW, DOS)
+## Build (OpenWatcom F77, FreeDOS)
 
 To compile with `wmake`:
 
@@ -18,7 +18,7 @@ To clean the build:
 C:\HOME\SOURCE\MINIPI\PORT-F77\>wmake /c clean
 ```
 
-## Build (Gfortran, Linux
+## Build (Gfortran, Linux)
 
 To compile with `make`:
 
