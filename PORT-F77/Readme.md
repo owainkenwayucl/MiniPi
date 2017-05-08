@@ -26,9 +26,17 @@ To compile with `make`:
 $ make -f Makefile.gnu 
 ```
 
-To clean the buils:
+To clean the build:
 
 ```none
 $ make -f Makefile.gnu clean
 ```
+
+## Structure
+
+* `MAKEFILE` - Watcom WMake makefile
+* `Makefile.gnu` - GNU GNUmake makefile
+* `OUCHOW.F` - Shim for OpenWatcom
+* `PI.F` - Cross platform implementation
+* `ouchgnu.f90` - Shim for Gfortran 
 
