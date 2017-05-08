@@ -27,7 +27,7 @@ c     Print usual info
       write(*,'(A)') 'Calculating PI using:'
       write(*,'(A,1I16,A)') '                  ',numsteps, ' slices'
 
-c     OpenWatcom specific timing code
+c     Timing code
       call getsec(start)
      
       s = 0.0d0
@@ -41,7 +41,7 @@ c     Main loop
  
       mypi = s * step
 
-c     OpenWatcom specific timing code
+c     Timing code
       call getsec(finish)
 
       elapsed = finish - start
