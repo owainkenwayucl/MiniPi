@@ -15,4 +15,10 @@ Copying the code to your Sharp PC is left as an exercise to the reader.
 
 I've done some tests and Bywater BASIC (bwbasic in the Ubuntu repos) also successfully executes this program.
 
+You can compile this program with FreeBASIC by passing it `-lang qb` to enable old-fashioned QBASIC behaviour.  (Tested on FreeDOS).
+
+This program also runs unmodified on the BASIC interpreter provided with OS8 for the PDP-8 in Ubuntu's `os8` package for `simh`:
+
+![Screenshot of code running on simh under OS8](https://pbs.twimg.com/media/DAbCTdKXYAEGs1s.png)
+
 The code is small enough that I originally posted it on Twitter: https://twitter.com/owainkenway/status/739812854933643264
