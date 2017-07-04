@@ -1,6 +1,6 @@
 # Miscell file to generate spreadsheet to implement pi calculation.
 
-data: A1 integ.csv ,
+fillcol: A 1 65536 "=(($D$1>=ROW()) * 1)*4/(1+((ROW()-0.5) * $D$2)^2)"
 D1 <- 200
 D2 <- =1/D1
 D3 <- =SUM(A1:A65536)

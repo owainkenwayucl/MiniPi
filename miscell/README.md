@@ -2,8 +2,6 @@
 
 Miscell is my prototype language for doing spreadsheets (see here: https://github.com/owainkenwayucl/miscell)
 
-This implementation cheats a bit as it uses a shell script to generate a CSV of the slices which is then included in the `.mcl` file.
-
 To build the CSV spreadsheet from these files type `make`, with `miscellc` in your `$PATH`.
 
 Once imported into LibreOffice Calc/Excel, you can set the value of n up to 65536 in cell D1 and pi will be recalculated accordingly.
