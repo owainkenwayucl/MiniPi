@@ -1,0 +1,12 @@
+# Miscell file to generate spreadsheet to implement pi calculation.
+
+data: A1 integ.csv ,
+D1 <- 200
+D2 <- =1/D1
+D3 <- =SUM(A1:A65536)
+D4 <- =D3/D1
+C1 <- n
+C2 <- step
+C3 <- s
+C4 <- pi
+E1 <- (max: 65536)
