@@ -1,0 +1,11 @@
+num_steps = 3000
+psum = 0
+step = 1/num_steps
+counter = 1
+repeat num_steps [
+	x = (counter - 0.5) * step
+ 	psum = psum + (4.0/(1.0 + (x * x)))
+	counter = counter + 1 ]
+pi = psum * step
+print pi
+
