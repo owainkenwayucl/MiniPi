@@ -1,0 +1,17 @@
+SCOMP=gsc
+CCOMP=gcc
+COPTS=-O3
+
+all: pi.exe pi_nopt.exe
+
+pi.exe: pi.c
+	$(CCOMP) $(COPTS) -I$(GAMBCDIR) -L$(GAMBCDIR) pi.c pi_.c -o pi.exe -lgambc
+
+pi_nopt.exe: pi.c
+	$(CCOMP) -I$(GAMBCDIR) -L$(GAMBCDIR) pi.c pi_.c -o pi_nopt.exe -lgambc
+
+pi.c: pi.scm
+	$(SCOMP) pi.scm
+
+clean:
+	del *.exe *.c
