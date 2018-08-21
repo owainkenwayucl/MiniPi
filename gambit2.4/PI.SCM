@@ -1,0 +1,27 @@
+; Calculate Pi by our usual method.
+(define (calc-pi n) 
+    (set! sum 0.0d0)
+    (set! st (/ 1.0d0 n))
+    (set! x 0.0d0)
+    (do ((i 1 (+ i 1))) ((> i n))
+       (set! x (* (- i 0.5d0) st))
+       (set! sum (+ sum (/ 4.0d0 (+ 1.0d0 (* x x)))))
+    )
+    (* sum st)
+)
+
+; Since we are on a Mac command line arguments are meaningless so have a 
+; procedure we can call instead.
+(define (bench-pi n)
+   (display "Calculating PI using\n  ")
+   (display n)
+   (display " slices\n  1 process\n")
+   (set! start (runtime))
+   (set! p (calc-pi n))
+   (set! stop (runtime))
+   (display "Obtained value of PI: ")
+   (display p)
+   (display "\nTime taken: ")
+   (display (- stop start))
+   (display " seconds\n")
+)
