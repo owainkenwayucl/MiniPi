@@ -16,3 +16,17 @@
   )
   (* step s)
 )
+
+; Because we are on a Mac, command-line arguments are meaningless.
+(defun bench-pi (n)
+  (format t "~%Calculating PI with\n  ~d slices\n  1 process\n" n)
+  (defvar p)
+  (defvar beg-t)
+  (defvar end-t)
+  (defvar elap-t)
+  (setq beg-t (get-internal-run-time))
+  (setq p (calc-pi n))
+  (setq end-t (get-internal-run-time))
+  (setq elap-t (float (/ (- end-t beg-t) internal-time-units-per-second)))
+  (format t "~%Estimated value of PI: ~d\nTime Taken: ~d seconds\n\n" p elap-t)
+)
