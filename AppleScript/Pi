@@ -1,0 +1,27 @@
+-- AppleScript to calculate PI
+-- Owain Kenway
+
+-- Set default number of slices
+set slices to 1000
+
+-- Ask user how many slices
+set t_slices to text returned of (display dialog "Enter number of slices" default answer "1000" buttons {"OK"} default button "OK")
+try
+	set slices to t_slices as integer
+on error
+	display dialog "You must enter an integer. Setting to default of 1000" buttons {"OK"}
+end try
+
+-- Our usual algorithm
+set totalsum to 0
+set step to 1.0 / slices
+
+repeat with i from 1 to slices
+	set x to (i - 0.5) * step
+	set totalsum to totalsum + (4.0 / (1.0 + (x * x)))
+end repeat
+
+set p to (totalsum * step) as string
+
+-- Output in dialog
+display dialog "Estimated value of PI: " & p
