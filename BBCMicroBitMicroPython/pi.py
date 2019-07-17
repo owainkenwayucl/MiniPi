@@ -8,7 +8,7 @@
 from microbit import *
 
 # Our main function.
-def picalc(n, REPL_only = False):
+def picalc(n = 250, REPL_only = False):
 
 # We don't seem to have utime? Luckily microbit.running_time()
 # gives us ms since boot.
