@@ -1,0 +1,13 @@
+(defun calc-pi (n) 
+  (defvar sum 0.0)
+  (defvar st (/ 1.0 n))
+  (defvar x 0.0)
+  (defvar i 1)
+  (loop  
+    (setq x (* (- i 0.5) st))
+    (setq sum (+ sum (/ 4.0 (+ 1.0 (* x x)))))
+    (setq i (+ 1 i))
+    (if (> i n) (return (* sum st)))
+  )
+)
+
