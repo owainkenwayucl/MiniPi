@@ -1,0 +1,5 @@
+(defun pi ()
+   (fasload calcpi)
+   (princ (calcpi 250))
+   (quit)
+)

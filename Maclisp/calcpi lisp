@@ -1,0 +1,11 @@
+(defun calcpi (n)
+   (setq x 0.0)
+   (setq step (quotient (float 1) (float n)))
+   (setq s 0.0)
+
+   (do ((i 1 (+ i 1))) ((> i n)) 
+      (setq x (*$ (-$ (float i) 0.5) step)) 
+      (setq s (+$ s (quotient 4.0 (+$ 1.0 (*$ x x )))))
+   )
+   (*$ step s)
+)
