@@ -1,5 +1,4 @@
 (defun calcpi (n)
-   (setq base 12)
    (setq x 0.0)
    (setq step (quotient (float 1) (float n)))
    (setq s 0.0)
