@@ -13,32 +13,72 @@ This has been tested on ITS (https://github.com/PDP-10/its)
 1. Generate fasl files:
 
 ```none
-:complr calcpi lisp
+*:complr calcpi lisp
+
+LISP COMPILER 2000 [in LISP 2154]
+:PROCED 
+*
+Job COMPLR finished
 :kill
-:complr pi lisp
+*:complr pi lisp
+
+LISP COMPILER 2000 [in LISP 2154]
+:PROCED 
+*
+Job COMPLR finished
 :kill
 ```
 
 2. Run `pi dumper` to generate `ts pi`
 
 ```
-:lisp pi dumper
+*:lisp pi dumper
+:kill 
+
 ```
 
 You can then run it for 250 steps with `:pi`.
+
+```
+*:pi
+
+Calculating PI with 10000. slices
+Estimated value of PI: 3.14159232
+Time elapsed: 3.7001953 seconds
+NIL
+:KILL 
+*
+```
 
 Alternatively load directly into Maclisp:
 
 ```lisp
 (load "calcpi lisp")
-(calcpi 340)
+T 
+(calcpi 1000.)
+
+3.14159262 
+(benchpi 1000.)
+Calculating PI with 1000. slices
+Estimated value of PI: 3.14159262
+Time elapsed: 2.89941406 seconds
+
+NIL 
 ```
 
 Or load the fasl file into Maclisp
 
 ```lisp
 (fasload calcpi)
-(calcpi 340)
+126146 
+(calcpi 1000.)
+3.14159262 
+(benchpi 1000.)
+Calculating PI with 1000. slices
+Estimated value of PI: 3.14159262
+Time elapsed: 0.400390625 seconds
+
+NIL
 ```
 
 
