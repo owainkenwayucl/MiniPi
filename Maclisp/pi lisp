@@ -1,4 +1,5 @@
 (defun pi ()
+   (setq base 12)
    (fasload calcpi)
    (princ (calcpi 250))
    (quit)
