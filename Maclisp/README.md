@@ -10,7 +10,7 @@ This has been tested on ITS (https://github.com/PDP-10/its)
 
 ## To compile:
 
-1. Generate fasl files:
+1. Generate fasl files with `:complr` (make sure to `:kill` the background `:complr` process when it's finished):
 
 ```none
 *:complr calcpi lisp
@@ -37,7 +37,7 @@ Job COMPLR finished
 
 ```
 
-You can then run it for 250 steps with `:pi`.
+You can then run it for 10000 steps with `:pi`.
 
 ```
 *:pi
