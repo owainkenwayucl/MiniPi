@@ -1,5 +1,5 @@
 (defun pi ()
    (fasload calcpi)
-   (princ (calcpi 168.))
+   (princ (benchpi 10000.))
    (quit)
 )

@@ -1,3 +1,4 @@
+; Core Calculation
 (defun calcpi (n)
    (setq x 0.0)
    (setq step (quotient (float 1) (float n)))
@@ -9,3 +10,21 @@
    )
    (*$ step s)
 )
+
+; Benchmark
+(defun benchpi (n)
+   (terpri)
+   (setq tbase base)
+   (setq base 12)
+   (princ "Calculating PI with ") (princ n) (princ " slices")
+   (setq base tbase)
+   (terpri)
+   (setq t0 (time))
+   (setq p (calcpi n))
+   (setq t1 (time))
+   (princ "Estimated value of PI: ")(princ p)
+   (terpri)
+   (princ "Time elapsed: ")(princ (-$ t1 t0))(princ " seconds")
+   (terpri)
+)
+
