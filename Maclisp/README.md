@@ -5,8 +5,8 @@ This has been tested on ITS (https://github.com/PDP-10/its)
 ## File:
 
  * `calcpi lisp` - core algorithm.
- * `pi lisp` - wraper (to call `(quit)` etc).
- * `pi dumper` - lisp program to generate `ts pi`.
+ * `estpi lisp` - wraper (to call `(quit)` etc).
+ * `estpi dumper` - lisp program to generate `ts estpi`.
 
 ## To compile:
 
@@ -20,7 +20,7 @@ LISP COMPILER 2000 [in LISP 2154]
 *
 Job COMPLR finished
 :kill
-*:complr pi lisp
+*:complr estpi lisp
 
 LISP COMPILER 2000 [in LISP 2154]
 :PROCED 
@@ -29,18 +29,18 @@ Job COMPLR finished
 :kill
 ```
 
-2. Run `pi dumper` to generate `ts pi`
+2. Run `estpi dumper` to generate `ts estpi`
 
 ```
-*:lisp pi dumper
+*:lisp estpi dumper
 :kill 
 
 ```
 
-You can then run it for 10000 steps with `:pi`.
+You can then run it for 10000 steps with `:estpi`.
 
 ```
-*:pi
+*:estpi
 
 Calculating PI with 10000. slices
 Estimated value of PI: 3.14159232

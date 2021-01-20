@@ -1,0 +1,9 @@
+(comment)
+(progn
+  (close (prog1 infile (inpush -1)))
+  (fasload estpi)
+  (gc)
+  (purify 0 0 'bporg)
+  (sstatus flush t)
+  (suspend ":kill " '(ts estpi))
+  (estpi))

@@ -1,0 +1,5 @@
+(defun estpi ()
+   (fasload calcpi)
+   (princ (benchpi 10000.))
+   (quit)
+)
