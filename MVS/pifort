@@ -1,0 +1,24 @@
+//PIFORT JOB (FORTRAN),
+//             'ESTIMATE PI',
+//             CLASS=A,
+//             MSGCLASS=A,
+//             MSGLEVEL=(1,1)
+//FORTH    EXEC FORTHCLG,REGION.FORT=1024K
+//FORT.SYSLIN DD UNIT=SYSDA
+//FORT.SYSABEND DD SYSOUT=*
+//FORT.SYSIN DD *
+      REAL*8 S, X, ST, P
+      N = 2000000
+      WRITE(6,20) N
+      S=0.0D0
+      ST=1.0D0/N
+      DO 8 I=1,N
+      X = (I - 0.5D0) * ST
+      S = S + 4.0D0/(1.0D0 + (X*X))
+8     CONTINUE
+      P = S*ST
+      WRITE(6,10) P
+10    FORMAT(' PI=',F8.6)
+20    FORMAT(' ESTIMATING PI WITH ',I8,' SLICES')
+      STOP
+      END
