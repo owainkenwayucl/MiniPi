@@ -1,12 +1,10 @@
-program pi
+subroutine pi(num_steps)
 
   implicit none
 
   double precision              :: step, x, s, mypi, start, stop
-  integer                       :: num_steps, i
-  integer                       :: argl
-
-  num_steps = 100000000
+  integer,intent(in)            :: num_steps
+  integer                       :: i
 
 ! Output start message
 
@@ -36,5 +34,5 @@ program pi
   write(*,*) "Obtained value of PI: ", mypi
   write(*,*) "Time taken:           ",(stop-start), " seconds"
 
-end program pi
+end 
 
