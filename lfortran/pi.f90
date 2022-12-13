@@ -1,4 +1,10 @@
-subroutine pi(num_steps)
+program pi
+  implicit none
+
+  call est_pi(10000000)
+end program pi
+
+subroutine est_pi(num_steps)
 
   implicit none
 
