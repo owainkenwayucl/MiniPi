@@ -1,0 +1,23 @@
+     program pi
+
+      write(*,14)
+      read(*,12) n
+      write(*,20) n
+      s=0.0
+      st=1.0/n
+
+      do 8 i=1,n
+      x=(i-0.5)*st
+      s=s+4.0/(1.0+(x*x))
+8     continue
+
+      p=s*st
+
+      write(*,10) p
+
+10    format(" PI=",F8.6)
+12    format(I8)
+14    format(" Enter a number of slices (8 digits):")
+20    format(" Estimating Pi with ",I8," slices")
+
+      end
