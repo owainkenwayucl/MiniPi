@@ -1,4 +1,4 @@
-     program pi
+      program pi
 
       write(*,14)
       read(*,12) n
