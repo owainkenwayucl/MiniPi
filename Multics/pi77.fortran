@@ -1,0 +1,24 @@
+      program pi77
+
+      real*8        step, x, s, mypi
+      integer       numsteps, i
+
+      write(*,'(A)') "Enter the number of slices (8 digits):"
+      read(*,13) numsteps
+
+      write(*,'(A)') "Calculating PI using:"
+      write(*,'(A,1I16,A)') "                  ",numsteps," slices"
+
+      s = 0.0d0
+      step = 1.0d0/numsteps
+
+      do 8 i = 1, numsteps
+        x = (i - 0.5d0) * step
+        s = s + 4.0d0/(1.0d0 + (x*x))
+8     continue
+      mypi = s * step
+
+      write(*,'(A,1F12.10,A)') "Obtained value of PI: ",mypi
+
+13    format(I8)
+      end
