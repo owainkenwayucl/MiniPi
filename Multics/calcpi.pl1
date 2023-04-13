@@ -1,4 +1,4 @@
-pi: proc options(main);
+calcpi: proc options(main);
    /* Doesn't do read in yet */
    declare (step, x, s, mypi) float(18);
    declare (i, n) fixed binary;
@@ -21,4 +21,4 @@ pi: proc options(main);
 
    call ioa_ ("Estimated value of Pi:  ^f",mypi);
    return;
-end pi;
+end calcpi;
